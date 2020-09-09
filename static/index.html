@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/landing.css">
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <title></title>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        
+      <!--    <input type="checkbox" id="check">-->
+      <!--    <label for="check" class="checkbtn">-->
+      <!--    <i class="fas fa-bars"></i>-->
+      <!--</label>-->
+      
+      <ul>
+          <span class="hamburger"><i class="fas fa-bars"></i></span>
+        <li><a href="#">Questions</a></li>
+        <li><a href="#">Residency</a></li>
+        <li><a href="#">Reading</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">Login</a></li>
+    
+      </ul>
+    </div>
+        <div class="background-image" style="background-image:url(assets/images/doctor.jpeg);"></div>
+        <div class="header">
+            <div class="logo"><img src="assets/images/centerimage.png"  width="200" height="200"></div>
+              
+            <div class="search-box">
+                 <i class="fas fa-search serch-icon"></i>
+                 <input type="text" placeholder=" The truth is out there...">
+            </div>
+	  </div>
+	  
+	  <footer>
+	      
+	    <ul>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">About</a></a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+        <icon>
+        <i class="fab fa-discord"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-youtube"></i>
+        </icon>
+    
+      
+        
+	  </footer>
+	  
+	    <p>All rights reserved. JayMed <span id="today"></span></p>
+	    
+	  
+   </div> 
+
+
+ <script>
+         var d = new Date();
+         var year = "\xa0" + d.getFullYear();
+
+         document.getElementById("today").innerHTML = year;
+</script>
+     <script>
+         if($(window).width() <=600){
+         
+         $(".nav li").css("display","none");
+         
+         }
+         
+         $(".hamburger").on("click",function(){
+         $(".nav li").slideToggle();
+         
+         });
+         
+          $(window).resize(function(){
+               
+               if($(window).width() >600){
+         
+                  $(".nav li").css("display","block");
+              }
+              
+          });
+         
+         
+         
+     </script>
+</body>
+</html>
